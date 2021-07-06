@@ -3,6 +3,6 @@ class Camper < ApplicationRecord
     has_many :activities, through: :signups
 
     validates :name, presence: true
-    validates :age, numericality: {greater_than: 8, less_than: 18}
+    validates :age, numericality: {greater_than_or_equal_to: 8, less_than_or_equal_to: 18}
 
 end
